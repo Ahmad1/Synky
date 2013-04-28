@@ -2,6 +2,7 @@ package com.synky.synky;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.navdrawer.SimpleSideDrawer;
 
@@ -48,6 +50,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		preferences = (Button) findViewById(R.id.btn_pref);
 		
 		slideMenu = (ImageButton) findViewById(R.id.image_btn);
+		
+		// -- to add custom font from asset folder
+		TextView txt = (TextView) findViewById(R.id.tv_id);  
+		Typeface font = Typeface.createFromAsset(getAssets(), "gatorade_bold.ttf");  
+		txt.setTypeface(font); 
 
 	}
 
@@ -96,20 +103,4 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	}
 
-	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-		if (requestCode == 0) {
-			if (resultCode == RESULT_OK) {
-				contents = intent.getStringExtra("SCAN_RESULT");
-				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
-				Log.i("Barcode Result", contents);
-				Intent i1 = new Intent(MainActivity.this,
-						SynkyScan.class);
-				startActivity(i1);		
-				// Handle successful scan
-			} else if (resultCode == RESULT_CANCELED) {
-				// Handle cancel
-				Log.i("Barcode Result", "Result canceled");
-			}
-		}
-	}
 }

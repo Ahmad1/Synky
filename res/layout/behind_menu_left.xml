@@ -3,6 +3,13 @@
 
     <LinearLayout style="@style/behindMenuScrollContent"
         android:paddingTop="25dp" >
+        
+        <TextView 
+            android:id= "@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
+            android:text="Sean John"
+            android:textSize="30sp"/>
         <TextView
             style="@style/behindMenuItemTitle"
             android:text="Left" />

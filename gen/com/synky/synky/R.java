@@ -27,16 +27,17 @@ public final class R {
         public static final int slide_icon=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000b;
-        public static final int behind_btn=0x7f080009;
+        public static final int action_settings=0x7f08000c;
+        public static final int behind_btn=0x7f08000a;
         public static final int btn_contacts=0x7f080006;
         public static final int btn_pref=0x7f080007;
         public static final int btn_profile=0x7f080005;
         public static final int btn_scan=0x7f080004;
         public static final int footer=0x7f080002;
         public static final int header=0x7f080000;
-        public static final int imageView1=0x7f08000a;
+        public static final int imageView1=0x7f08000b;
         public static final int image_btn=0x7f080008;
+        public static final int tv_id=0x7f080009;
         public static final int view=0x7f080001;
         public static final int view_v=0x7f080003;
     }
